@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 48" role="img" aria-labelledby="title">
+  <title id="title">LINE Pay</title>
+  <rect width="96" height="48" rx="8" fill="#06c755"/>
+  <path d="M8 11h30v22H23l-8 7 2-7H8z" fill="#fff"/>
+  <text x="11" y="27" fill="#06c755" font-family="Arial,sans-serif" font-size="10" font-weight="700">LINE</text>
+  <text x="43" y="29" fill="#fff" font-family="Arial,sans-serif" font-size="15" font-weight="700">Pay</text>
+</svg>

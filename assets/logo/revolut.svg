@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 48" role="img" aria-labelledby="title">
+  <title id="title">Revolut</title>
+  <rect width="96" height="48" rx="8" fill="#fff"/>
+  <path d="M13 8h16c8 0 13 4 13 11 0 6-4 10-10 11l11 10H33L23 30h-2v10h-8zm8 7v9h8c3 0 5-2 5-5s-2-4-5-4z" fill="#191c1f"/>
+  <text x="47" y="29" fill="#191c1f" font-family="Arial,sans-serif" font-size="12" font-weight="700">Revolut</text>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 48" role="img" aria-labelledby="title">
+  <title id="title">Credit and debit card</title>
+  <rect width="96" height="48" rx="8" fill="#fff"/>
+  <rect x="5" y="8" width="48" height="32" rx="5" fill="#2563eb"/>
+  <path d="M5 16h48v7H5z" fill="#fff"/>
+  <rect x="11" y="30" width="13" height="4" rx="2" fill="#fff"/>
+  <circle cx="40" cy="32" r="5" fill="#ff5f00"/>
+  <circle cx="46" cy="32" r="5" fill="#eb001b" fill-opacity=".85"/>
+  <text x="59" y="28" fill="#1d4ed8" font-family="Arial,sans-serif" font-size="12" font-weight="700">CARD</text>
+</svg>

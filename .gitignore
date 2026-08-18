@@ -1,0 +1,14 @@
+# Operating system and editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Local and generated files
+*.log
+*.zip
+vendor/
+node_modules/
+.phpunit.result.cache

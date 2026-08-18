@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 48" role="img" aria-labelledby="title">
+  <title id="title">USDT</title>
+  <rect width="96" height="48" rx="8" fill="#fff"/>
+  <circle cx="24" cy="24" r="19" fill="#26a17b"/>
+  <path d="M12 12h24v6h-9v4c7 .3 12 1.5 12 3s-5 2.7-12 3v10h-6V28c-7-.3-12-1.5-12-3s5-2.7 12-3v-4h-9zm12 13c5 0 8-.4 10-.8-2-.5-5-.8-10-.8s-8 .3-10 .8c2 .4 5 .8 10 .8z" fill="#fff"/>
+  <text x="49" y="29" fill="#26a17b" font-family="Arial,sans-serif" font-size="15" font-weight="700">USDT</text>
+</svg>

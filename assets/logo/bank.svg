@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 48" role="img" aria-labelledby="title">
+  <title id="title">银联支付</title>
+  <rect width="96" height="48" rx="8" fill="#fff"/>
+  <path d="M13 8h25l-9 32H4z" fill="#e21836"/>
+  <path d="M33 8h25l-9 32H24z" fill="#0877be"/>
+  <path d="M53 8h25l-9 32H44z" fill="#00a66c"/>
+  <text x="30" y="29" fill="#fff" font-family="Arial,sans-serif" font-size="12" font-weight="700">银联</text>
+  <text x="76" y="29" fill="#222" font-family="Arial,sans-serif" font-size="9" font-weight="700">PAY</text>
+</svg>

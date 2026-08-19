@@ -3,7 +3,7 @@
  * Plugin Name:       EPay for WooCommerce
  * Description:       WooCommerce 易支付网关，支持多种独立支付方式。
  * Author:            EPay Contributors
- * Version:           2.0.0
+ * Version:           2.1.0
  * Text Domain:       epay
  * Domain Path:       /languages
  * Requires PHP:      7.4
@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'EPAY_VERSION', '2.0.0' );
+define( 'EPAY_VERSION', '2.1.0' );
 define( 'EPAY_FILE', __FILE__ );
 define( 'EPAY_PATH', plugin_dir_path( __FILE__ ) );
 define( 'EPAY_URL', plugin_dir_url( __FILE__ ) );
@@ -25,6 +25,7 @@ define( 'EPAY_URL', plugin_dir_url( __FILE__ ) );
 function epay_declare_woocommerce_compatibility() {
 	if ( class_exists( '\\Automattic\\WooCommerce\\Utilities\\FeaturesUtil' ) ) {
 		\Automattic\WooCommerce\Utilities\FeaturesUtil::declare_compatibility( 'custom_order_tables', EPAY_FILE, true );
+		\Automattic\WooCommerce\Utilities\FeaturesUtil::declare_compatibility( 'cart_checkout_blocks', EPAY_FILE, true );
 	}
 }
 add_action( 'before_woocommerce_init', 'epay_declare_woocommerce_compatibility' );
@@ -48,6 +49,42 @@ function epay_init() {
 	add_filter( 'woocommerce_payment_gateways', 'epay_register_gateways' );
 }
 add_action( 'plugins_loaded', 'epay_init', 20 );
+
+/**
+ * Register the payment methods with the Cart and Checkout Blocks API.
+ */
+function epay_blocks_support() {
+	if ( ! class_exists( '\\Automattic\\WooCommerce\\Blocks\\Payments\\Integrations\\AbstractPaymentMethodType' ) ) {
+		return;
+	}
+
+	require_once EPAY_PATH . 'includes/class-epay-blocks-payment-method.php';
+
+	add_action( 'woocommerce_blocks_payment_method_type_registration', 'epay_register_blocks_payment_methods' );
+}
+add_action( 'woocommerce_blocks_loaded', 'epay_blocks_support' );
+
+/**
+ * @param Automattic\WooCommerce\Blocks\Payments\PaymentMethodRegistry $payment_method_registry Payment method registry.
+ */
+function epay_register_blocks_payment_methods( $payment_method_registry ) {
+	$gateway_ids = array(
+		'epay_wxpay',
+		'epay_alipay',
+		'epay_bank',
+		'epay_revolut',
+		'epay_paypal',
+		'epay_alipayhk',
+		'epay_usdt',
+		'epay_linepay',
+		'epay_paynow',
+		'epay_card',
+	);
+
+	foreach ( $gateway_ids as $gateway_id ) {
+		$payment_method_registry->register( new EPAY_Blocks_Payment_Method( $gateway_id ) );
+	}
+}
 
 /**
  * Register the direct payment methods. There is intentionally no cashier gateway.

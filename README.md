@@ -27,6 +27,7 @@ WooCommerce 易支付网关插件，为不同支付通道提供独立的结账�
 - 付款请求发送到易支付的 `submit.php`，签名方式为 MD5。
 - 异步回调支持 GET 和 POST，并且具有幂等处理。
 - 订单操作使用 WooCommerce API，并声明兼容 HPOS 订单存储。
+- 同时支持经典 shortcode 结账和 WooCommerce Cart/Checkout Blocks。
 - 项目不包含码支付、QQ 支付或聚合收银台。
 
 ## 环境要求
@@ -47,6 +48,8 @@ WooCommerce 易支付网关插件，为不同支付通道提供独立的结账�
 2. 填写易支付网关地址、商户 ID 和商户密钥。
 3. 前往 **WooCommerce → 设置 → 付款**。
 4. 启用需要的支付方式并设置结账页标题。
+
+启用后的支付方式会同时显示在经典结账页和 Checkout Block 中。每个区块支付方式沿用相同的标题、说明和图标设置。
 
 ## 回调验证
 
